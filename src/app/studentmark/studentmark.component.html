@@ -1,0 +1,57 @@
+
+<style>
+table{  width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  th{
+    background-color: #007bff; /* Header background color */
+  color: #fff; /* Header text color */
+  text-align: left;
+  padding: 10px;
+  }
+  td{
+    padding:20px;
+  text-align: left;
+  border: 1px solid #2a2945; 
+  background-color: rgb(227, 215, 199);
+  color: firebrick;
+  margin: 10px;
+  }
+  .pass {
+  background-color: #4CAF50; /* Green background for passing marks */
+  color: white; /* White text color */
+}
+
+/* Styles for failing marks */
+.fail {
+  background-color: #F44336; /* Red background for failing marks */
+  color: white; /* White text color */
+}
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+
+</style><h1>Student Mark </h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mark(100)</th>
+        <th>resule</th>
+
+    </tr>
+    <tr *ngFor="let student of students">
+        <td>{{student.unme}}</td>
+        <td>{{student.email}}</td>
+        <td [ngClass]="getMarkStyle(student.smark)">{{ student.smark }}</td>
+        <td>{{resulte}}</td>
+    </tr>
+    
+   
+</table>

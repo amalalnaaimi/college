@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <title>student
+    </title>
+    <style>
+    *{
+    margin:2;
+    padding:2;
+    box-sizing: border-box;
+    font-family:'poppins',sans-serif;
+
+ 
+}
+body{
+    text-align: center;
+    display: flex;
+   justify-content: center;
+    min-height: 100vh;
+    min-width: 10vh;
+    background: #8fc2e7;
+}
+div{
+    width: 80%;
+    background-color: white;
+   
+    border-radius: 5px;
+   
+}
+h1{ text-align: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 40px;
+font-weight: 600;
+color: firebrick;
+}
+.impor p,h4{
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color:darkblue;
+    justify-content: space-between;
+}
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px;
+  font-size: 16px;
+}
+.impor p img{
+  max-width: 100%;
+  height: auto;
+  text-align: right;
+  
+}
+
+        
+    </style>
+</head>
+<body>
+<div>
+<h1>welcome to {{title}}</h1>
+<h3>Here are some information of student </h3>
+<div class="impor">
+    <p>student name : {{name}}<br>
+    student phone number:{{phone}}<br>
+student age :{{age}}<br><img src="assets\image\photodune-1678194-group-of-graduate-students-xxl-1.jpg" height="200"width="400"><br>
+
+student codes :</p>
+<input type="text" 
+placeholder="Plase Enter Your code" #box
+(input)="getvalue(box.value)">
+
+
+</div>
+<h4> Your code is :{{value}}</h4>
+<button routerLink="studentmark">Go To Student Marks </button>
+</div>
+
+</body>
